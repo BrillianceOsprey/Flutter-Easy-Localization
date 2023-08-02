@@ -7,10 +7,10 @@ class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
   @override
-  _MainScreenState createState() => _MainScreenState();
+  MainScreenState createState() => MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class _MainScreenState extends State<MainScreen> {
             ),
             GestureDetector(
               onTap: () async {
-                context.locale = const Locale('my', 'MM');
+                context.setLocale(const Locale('my', 'MM'));
                 // const newLocal = Locale('my', 'MM');
                 // await context.setLocale(newLocal);
               },
